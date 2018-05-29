@@ -1,0 +1,51 @@
+@charset "UTF-8";
+/* Rating Stars */
+.d-inline-block {
+  display: inline-block;
+}
+a,span{
+  display: inline-block;
+}
+.rating-row p {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.rating-block {
+  transform: rotateY(180deg);
+}
+.rating-block input {
+  display: none;
+}
+.rating-block label {
+  margin-right: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 0;
+  display: inline-block;
+}
+.rating-block label:before {
+  content: "";
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 14px;
+  color: #e3e3e3;
+}
+.rating-block label:after {
+  content: "";
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 14px;
+  color: #fec701;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.4s;
+}
+.rating-block label:hover ~ label:after,
+.rating-block label:hover:after,
+.rating-block input:checked ~ label:after {
+  opacity: 1;
+}
